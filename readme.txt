@@ -7,3 +7,4 @@ Setup Environment
 6. go to source folder
 7. run "npm install" to install dependencies
 8. run "gulp" to compile and run site locally
+9. ,jjf,ds,jfbs,dfs
