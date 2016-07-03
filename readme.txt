@@ -4,6 +4,5 @@ Setup Environment
 3. run "npm install -g gulp"
 4. run "npm install -g bower"
 5. clone sources from https://github.com/ADemukh/a-avto.github.io
-6. go to source folder
 7. run "npm install" to install dependencies
 8. run "gulp" to compile and run site locally
