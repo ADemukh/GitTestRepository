@@ -1,0 +1,11 @@
+<div class="page-header">
+	<h1>
+		 <img class="photo" ng-src="{{todo.userPhoto}}"> 
+		{{::todo.user}}'s To Do List
+		<span class="label label-defult"
+			ng-hide="incompleteCount(todo.items)===0"
+			ng-class="warningLevel(todo.items)">
+			{{incompleteCount(todo.items)}}
+		</span>
+	</h1>
+</div>

@@ -1,0 +1,21 @@
+namespace exam2kurs2sem
+{
+    delegate int Mydelegate(int x, int y);
+    class MyClass
+    {
+        public int Sum(int i, int j) 
+        {
+            return i + j;
+        }
+
+        public static int Ruzn(int i, int j) 
+        {
+            return i - j;
+        }
+        public static int Sravniv(int i, int j)
+        {
+            return i < j ? i : j;
+        }
+    }
+}
+            

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+	<meta charset="utf-8">
+	<title>Vitaliy's TO DO LIST</title>
+	<link href="vendor/bootstrap/dist/css/bootstrap.min.css" 
+	rel="stylesheet">
+	<link href="vendor/bootstrap/dist/css/bootstrap-theme.min.css" 
+	rel="stylesheet">
+	<link href= "css/main.css" rel="stylesheet">
+	<link href= "css/ng-cloak.css" rel="stylesheet">
+
+</head>
+
+<body ng-controller-"Todo" ng-cloak>
+	<div class="container">
+		<div ng-include="'page-header'"</div>
+	<!--	<div class="page-header.html">
+			<h1>
+				 <img class="photo" ng-src="{{todo.userPhoto}}"> 
+				{{::todo.user}}'s To Do List
+				<span class="label label-defult"
+					ng-hide="incompleteCount(todo.items)===0"
+					ng-class="warningLevel(todo.items)">
+					{{incompleteCount(todo.items)}}
+				</span>
+			</h1>
+		</div> -->
+
+	<div class="panel">
+		<form novalidate name="newTask">
+			<div class="form-group">
+				<label for="action">Action:</label>
+				<div class="input-group">
+					<input 
+					id="action" 
+					name="action"
+					 class="form-control"
+					  ng-model="newItem.action"/>
+					<span class="input-group=btn">
+						<button class="btn btn-defult"
+							ng-click="addNewItem(todo.items, newItem>"
+							ng-disabled="!newItem.action">
+							Add
+						</button>
+					</span>
+				</div> 
+			</div>
+		</form>
+		<table class="table table-scriped">
+			<thead>
+				<tr>
+					<th>Description</th>
+					<th>Done</th>
+				</tr>
+			</thead>
+			<tbody>
+				<!--<tr ng-repeat="item int todo.items | filter: 
+				{done: 'false'} | orderBy: 'action'"> -->
+				<tr ng-repeat="item int todo.items | checkedItems: 
+				showComplete | orderBy: 'action'">
+					<td>{{item.action}}</td>
+					<td><input type="checkbox" ng-model="item.done" /></td>
+					<td>{{item.done}}</td>
+				</tr>
+
+				 <!-- <tr><td><Estimate...></td><td><No></td></tr>
+				 <tr><td><Create...></td><td><No></td></tr> 
+				 <tr><td><Edit...></td><td><Yes></td></tr>
+				 <tr><td><Delete...></td><td><No></td></tr> -->
+			</tbody>
+		</table>
+
+		<div task-list></div>
+		<input type="checkbox" ng-model="showComplete" />ShowComplete
+	</div>
+</div>
+
+ <script src="vendor/angular/angular.min.js"></script>
+ <script src="app.js"></script>
+
+</body>
+</html>
