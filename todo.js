@@ -1,6 +1,0 @@
-[
-	{ "action":  "Estimate...", "done": false },
-	{ "action":  "Create...", "done": false },
-	{ "action":  "Edit...", "done": true },
-	{ "action":  "Delete...", "done": false }
- ] 
